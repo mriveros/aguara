@@ -68,6 +68,7 @@ $catego=  $_SESSION["categoria_usuario"];
 			});
 		};
 		function eliminar(codigo){
+            alert(codigo)
 			document.getElementById("txtCodigoE").value = codigo;
 		};
 	</script>
@@ -215,7 +216,7 @@ $catego=  $_SESSION["categoria_usuario"];
 				<!-- Modal Header -->
 				<div class="modal-header"><button type="button" class="close" data-dismiss="modal">
 					<span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-					<h3 class="modal-title" id="myModalLabel"><i class="glyphicon glyphicon-trash"></i> Eliminar Reserva! :(</h3>
+					<h3 class="modal-title" id="myModalLabel"><i class="glyphicon glyphicon-trash"></i> Eliminar Alerta de Salud</h3>
 				</div>
             
 				<!-- Modal Body -->
@@ -233,7 +234,7 @@ $catego=  $_SESSION["categoria_usuario"];
 				<!-- Modal Footer -->
 				<div class="modal-footer">
 					<button type="" onclick="location.reload();" class="btn btn-warning" data-dismiss="modal">Cancelar</button>
-					<button type="submit" name="borrar" class="btn btn-danger">Borrar</button>
+					<button type="submit" name="borrarsalud" class="btn btn-danger">Borrar</button>
 					</form>
 				</div>
 			</div>

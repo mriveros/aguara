@@ -46,7 +46,8 @@ $catego=  $_SESSION["categoria_usuario"];
     <script src="../../dist/js/sb-admin-2.js"></script>
 	    
 	<!-- Page-Level Demo Scripts - Tables - Use for reference -->
-    <script src="http://maps.google.com/maps?file=api&v=2&key= AIzaSyDsiJy2aAixv-XKE64wi7-V14_BVxnZMY0 " type="text/javascript"></script>
+     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD47zwfaZl6ddpL-2sA9NaIKHNHWsIXIlI&callback=initMap"
+    async defer></script>
     <script>
     $(document).ready(function() {
         $('#dataTables-example').DataTable({
@@ -56,20 +57,21 @@ $catego=  $_SESSION["categoria_usuario"];
     </script>
 	<script type="text/javascript">
 		
-	function load(posx,posy,precision) {
-            if (GBrowserIsCompatible()) {
-               var map = new GMap2(document.getElementById("map"));   
-               //map.setCenter(new GLatLng(-25.333567, -57.574684), 17); 
-               map.setCenter(new GLatLng(posx, posy), precision);
-               map.addControl(new GLargeMapControl());
-               map.setMapType(G_SATELLITE_MAP);
-            //Para marcar el punto se invierte (x,y)!
-               //var point = new GPoint (-57.574684,-25.333567);
-               var point = new GPoint (posy,posx);
-               var marker = new GMarker(point);
-               map.addOverlay(marker);
-            }
-         }
+	  var map;
+      function initMap(posx,posy,precision) {
+       var myLatLng = {lat: posx, lng: posy};
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 20,
+          center: myLatLng
+        });
+
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: 'Ubicación GPS!'
+        });
+      }
 	</script>
 </head>
 
@@ -93,7 +95,7 @@ $catego=  $_SESSION["categoria_usuario"];
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                      <h1 class="page-header">Alertas Procesadas- <small>Aguara</small></h1>
+                      <h1 class="page-header">Alertas Procesadas - <small>Aguara</small></h1>
                 </div>	
             </div>
             <!-- /.row -->
@@ -137,7 +139,7 @@ $catego=  $_SESSION["categoria_usuario"];
                         echo "<td>".$row1["al_posx"]."</td>";
                         echo "<td>".$row1["al_posy"]."</td>";
                         echo "<td>";?>
-                        <a onclick='load(<?php echo $row1["al_posx"];?>,<?php echo $row1["al_posy"];?>,<?php echo $row1["al_precision"];?>)' class="btn btn-success btn-xs active" data-toggle="modal" data-target="#modalbor" role="button">Ver Ubicacion</a>
+                        <a onclick='initMap(<?php echo $row1["al_posx"];?>,<?php echo $row1["al_posy"];?>,<?php echo $row1["al_precision"];?>)' class="btn btn-success btn-xs active" data-toggle="modal" data-target="#modalbor" role="button">Ver Ubicacion</a>
                         <?php
                         echo "</td></tr>";
                     }

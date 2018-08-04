@@ -88,7 +88,7 @@ $pdf->SetFont('Arial','B',10);
 
 
 
-$conectate=pg_connect("host=localhost port=5432 dbname='Aguara' user='postgres' password='2016aws.Postgres.ubuntu'")or die ('Error al conectar a la base de datos');
+$conectate=pg_connect("host=localhost port=5432 dbname='aguara' user='postgres' password='postgres'")or die ('Error al conectar a la base de datos');
 $consulta=pg_exec($conectate,"SELECT res.res_cod,res.res_nom,res.res_obs,to_char(res.res_fecha,'DD/MM/YYYY')as res_fecha,res.res_activo,res.res_confirm,res.res_telefono,eve.eve_nom,eve.eve_cod 
                     from reservas res, eventos eve
                     where res.res_cod=eve.eve_cod

@@ -77,12 +77,9 @@ $catego=  $_SESSION["categoria_usuario"];
         var marker = new google.maps.Marker({
           position: myLatLng,
           map: map,
-          title: 'Hello World!'
+          title: 'Ubicación GPS!'
         });
       }
-
-
-      
 	</script>
 </head>
 
@@ -106,7 +103,7 @@ $catego=  $_SESSION["categoria_usuario"];
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                      <h1 class="page-header">Alertas Atendidas- <small>Aguara</small></h1>
+                      <h1 class="page-header">Alertas Atendidas - <small>Aguara</small></h1>
                 </div>	
             </div>
             <!-- /.row -->

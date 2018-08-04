@@ -215,7 +215,7 @@ $catego=  $_SESSION["categoria_usuario"];
 				<!-- Modal Header -->
 				<div class="modal-header"><button type="button" class="close" data-dismiss="modal">
 					<span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-					<h3 class="modal-title" id="myModalLabel"><i class="glyphicon glyphicon-trash"></i> Eliminar Reserva! :(</h3>
+					<h3 class="modal-title" id="myModalLabel"><i class="glyphicon glyphicon-trash"></i> Eliminar Alerta</h3>
 				</div>
             
 				<!-- Modal Body -->
