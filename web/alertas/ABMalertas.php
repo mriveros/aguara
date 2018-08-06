@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(!isset($_SESSION['codigo_usuario']))
-header("Location:http://localhost/misterbr/login/acceso.html");
+header("Location:http://www.smarthub.design/misterbr/login/acceso.html");
 $catego=  $_SESSION["categoria_usuario"];
 
 ?>
@@ -12,7 +12,7 @@ $catego=  $_SESSION["categoria_usuario"];
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="Refresh" content="10;url=http://localhost/aguara/web/alertas/ABMalertas.php">
+    <meta http-equiv="Refresh" content="10;url=http://www.smarthub.design/aguara/web/alertas/ABMalertas.php">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">

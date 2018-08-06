@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(!isset($_SESSION['codigo_usuario']))
-header("Location:http://localhost/aguara/login/acceso.html");
+header("Location:http://www.smarthub.design/aguara/login/acceso.html");
 $catego=  $_SESSION["categoria_usuario"];
 ?>
 <!DOCTYPE html>

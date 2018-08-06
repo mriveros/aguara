@@ -3,7 +3,7 @@
         //conecta al 
         function conexionlocal()
         {
-             return $dbconn = $conectate=pg_connect("host='localhost' port=5432 dbname='aguara' user='postgres' password='postgres'")or die ('Error al conectar a la base de datos');
+             return $dbconn = $conectate=pg_connect("host='www.smarthub.design' port=5432 dbname='aguara' user='postgres' password='postgres'")or die ('Error al conectar a la base de datos');
         } 
         //funcion que selecciona a la base de Datos
        function selectConexion($database){

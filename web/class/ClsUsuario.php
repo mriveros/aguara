@@ -34,7 +34,7 @@
             if(func_existeDato($username, 'usuarios', 'usu_username')==true){
                 echo '<script type="text/javascript">
 		alert("El Usuario ya existe. Intente ingresar otro Usuario");
-                window.location="http://localhost/aguara/web/usuarios/ABMusuarios.php";
+                window.location="http://www.smarthub.design/aguara/web/usuarios/ABMusuarios.php";
 		</script>';
                 }else{              
                 //se define el Query   
@@ -42,7 +42,7 @@
                 //ejecucion del query
                 $ejecucion = pg_query($query)or die('Error al realizar la carga');
                 $query = '';
-                header("Refresh:0; url=http://localhost/aguara/web/usuarios/ABMusuarios.php");
+                header("Refresh:0; url=http://www.smarthub.design/aguara/web/usuarios/ABMusuarios.php");
                 }
             }
         //si es Modificar    
@@ -50,10 +50,10 @@
             
             pg_query("update usuarios set usu_nom='$nombreM',usu_ape= '$apellidoM',usu_username='$usernameM',usu_pass=md5('$passwordM'),estado='$activoM',cat_cod=$categoriaM WHERE usu_cod=$codigoModif");
             $query = '';
-            header("Refresh:0; url=http://localhost/aguara/web/usuarios/ABMusuarios.php");
+            header("Refresh:0; url=http://www.smarthub.design/aguara/web/usuarios/ABMusuarios.php");
         }
         //Si es Eliminar
         if(isset($_POST['borrar'])){
             pg_query("update usuarios set estado='f' WHERE usu_cod=$codigoElim");
-            header("Refresh:0; url=http://localhost/aguara/web/usuarios/ABMusuarios.php");
+            header("Refresh:0; url=http://www.smarthub.design/aguara/web/usuarios/ABMusuarios.php");
 	}

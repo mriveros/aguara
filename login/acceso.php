@@ -28,7 +28,7 @@ $n = count($row['usu_nom']);
 if ($n == 0) {
     echo '<script type="text/javascript">
                          alert("Nombre de Usuario o Password no valido..!");
-			 window.location="http://localhost/aguara/login/acceso.html";
+			 window.location="http://www.smarthub.design/aguara/login/acceso.html";
                       </script>';
 } else {
     $_SESSION["username"] = $row['usu_username'];
@@ -37,10 +37,10 @@ if ($n == 0) {
     $_SESSION["categoria_usuario"] = $row['cat_cod'];
     if ($row['cat_cod'] == 1) {
         echo '<script type="text/javascript">alert("aca");</script>';
-        header("Location:http://localhost/aguara/web/menu.php");
+        header("Location:http://www.smarthub.design/aguara/web/menu.php");
     } else if ($row['cat_cod'] == 2) {
-        header("Location:http://localhost/aguara/web/menu_usuario.php");
+        header("Location:http://www.smarthub.design/aguara/web/menu_usuario.php");
     } else if ($row['cat_cod'] == 3) {
-        header("Location:http://localhost/aguara/web/menu_supervisor.php");
+        header("Location:http://www.smarthub.design/aguara/web/menu_supervisor.php");
     }
 }

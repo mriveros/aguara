@@ -29,7 +29,7 @@ $codusuario=  $_SESSION["codigo_usuario"];
             if(func_existeDato($nombreA, 'empresas', 'em_nom')==true){
                 echo '<script type="text/javascript">
 		alert("La Empresa ya existe. Ingrese otra Emrpesa.");
-                window.location="http://localhost/aguara/web/empresas/ABMempresa.php";
+                window.location="http://www.smarthub.design/aguara/web/empresas/ABMempresa.php";
 		</script>';
                 }else{              
                 //se define el Query
@@ -37,7 +37,7 @@ $codusuario=  $_SESSION["codigo_usuario"];
                     . "VALUES ('$nombreA','$descripcionA','t');";
                 //ejecucion del query
                 $ejecucion = pg_query($query)or die('Error al realizar la carga'.$query);
-                header("Refresh:0; url=http://localhost/aguara/web/empresas/ABMempresa.php");
+                header("Refresh:0; url=http://www.smarthub.design/aguara/web/empresas/ABMempresa.php");
                 }
             }
         //si es Modificar    
@@ -49,11 +49,11 @@ $codusuario=  $_SESSION["codigo_usuario"];
         //ejecucion del query
         $ejecucion = pg_query($query)or die('Error al realizar la carga'.$query);
         $query = '';
-        header("Refresh:0; url=http://localhost/aguara/web/empresas/ABMempresa.php");
+        header("Refresh:0; url=http://www.smarthub.design/aguara/web/empresas/ABMempresa.php");
         }
         //Si es Eliminar
         if(isset($_POST['borrar'])){
             pg_query("update empresas set em_estado='f' WHERE em_cod=$codigoElim");
-            header("Refresh:0; url=http://localhost/aguara/web/empresas/ABMempresa.php");
+            header("Refresh:0; url=http://www.smarthub.design/aguara/web/empresas/ABMempresa.php");
             
 	}

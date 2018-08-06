@@ -22,23 +22,23 @@ $codusuario=  $_SESSION["codigo_usuario"];
         if(isset($_POST['modificar'])){
             pg_query("update alertas set al_confirm='t' where al_cod=$codigoModif");
             $query = '';
-            header("Refresh:0; url=http://localhost/aguara/web/alertas/ABMalertas_atendidas.php");
+            header("Refresh:0; url=http://www.smarthub.design/aguara/web/alertas/ABMalertas_atendidas.php");
         }
     //Si es Eliminar
         if(isset($_POST['borrar'])){
             pg_query("update alertas set al_estado='f' WHERE al_cod=$codigoElim");
-            header("Refresh:0; url=http://localhost/aguara/web/alertas/ABMalertas.php");
+            header("Refresh:0; url=http://www.smarthub.design/aguara/web/alertas/ABMalertas.php");
 	}
 
     //Si es Eliminar
         if(isset($_POST['borrarsalud'])){
             echo'puto';
             pg_query("delete from alertas WHERE al_cod=$codigoElim");
-            header("Refresh:0; url=http://localhost/aguara/web/alertas/ABMsalud.php");
+            header("Refresh:0; url=http://www.smarthub.design/aguara/web/alertas/ABMsalud.php");
     }
         //Si es terminar
         if(isset($_POST['terminar'])){
             pg_query("update alertas set al_obs='$observacionesM',al_confirm='f',al_procesado='t' where al_cod=$codigoModif");
             $query = '';
-            header("Refresh:0; url=http://localhost/aguara/web/alertas/ABMalertas_atendidas.php");
+            header("Refresh:0; url=http://www.smarthub.design/aguara/web/alertas/ABMalertas_atendidas.php");
         }

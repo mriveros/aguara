@@ -35,7 +35,7 @@ conexionlocal();
             if(func_existeCedula($ciA)==true){
                 echo '<script type="text/javascript">
 		alert("La Persona ya existe. Ingrese otra Persona.");
-                window.location="http://localhost/aguara/web/personas/ABMpersona.php";
+                window.location="http://www.smarthub.design/aguara/web/personas/ABMpersona.php";
 		</script>';
                 }else{              
                 //se define el Query
@@ -44,7 +44,7 @@ conexionlocal();
                 //ejecucion del query
                 $ejecucion = pg_query($query)or die('Error 108:'.$query);
                 $query = '';
-                header("Refresh:0; url=http://localhost/aguara/web/personas/ABMpersona.php");
+                header("Refresh:0; url=http://www.smarthub.design/aguara/web/personas/ABMpersona.php");
                 }
             }
         //si es Modificar    
@@ -54,12 +54,12 @@ conexionlocal();
                     . "per_estado='$activoM',per_direccion='$direccionM',"
                     . "per_telefono=$telefonoM WHERE per_cod=$codigoModif";
             $ejecucion = pg_query($query)or die('Error 108:'.$query);
-            header("Refresh:0; url=http://localhost/aguara/web/personas/ABMpersona.php");
+            header("Refresh:0; url=http://www.smarthub.design/aguara/web/personas/ABMpersona.php");
         }
         //Si es Eliminar
         if(isset($_POST['borrar'])){
             pg_query("update personas set per_estado='f' WHERE per_cod=$codigoElim");
-            header("Refresh:0; url=http://localhost/aguara/web/personas/ABMpersona.php");
+            header("Refresh:0; url=http://www.smarthub.design/aguara/web/personas/ABMpersona.php");
             
 	}
    

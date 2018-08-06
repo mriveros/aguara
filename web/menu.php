@@ -1,5 +1,5 @@
 <?php
-    $conectate=pg_connect("host=localhost port=5432 dbname=aguara user=postgres password=postgres")or die ('Error al conectar a la base de datos');
+    $conectate=pg_connect("host=www.smarthub.design port=5432 dbname=aguara user=postgres password=postgres")or die ('Error al conectar a la base de datos');
     //$consulta1= pg_exec($conectate,"select count(al_cod) as cantidad from alertas where al_fecha < now()");
     //$consulta2= pg_exec($conectate,"select count(al_cod) as cantidad from alertas where al_activo='t' and al_confirm='f' and al_fecha < now()");
     //$consulta3= pg_exec($conectate,"select count(al_cod) as cantidad from alertas where al_activo='f' and al_confirm='f' and al_fecha < now()");
@@ -52,7 +52,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <img src="http://localhost/aguara/img/gama_fiesta.png" width=500 height=80 alt="Marcos A. Riveros"> 
+                <img src="http://www.smarthub.design/aguara/img/gama_fiesta.png" width=500 height=80 alt="Marcos A. Riveros"> 
             </div>
             <center><a class="navbar-brand" href="#"><h3>Sistema- Servidor Aguara</h3></a></center>
             <!-- /.navbar-header -->
@@ -133,7 +133,7 @@
                         <li><a href="#"><i class="fa fa-gear fa-fw"></i> Configuracion</a>
                         </li>
                         <li class="divider"></li>
-                        <li><a href="http://localhost/aguara/web/logout.php"><i class="fa fa-sign-out fa-fw"></i> Cerrar Sesion</a>
+                        <li><a href="http://www.smarthub.design/aguara/web/logout.php"><i class="fa fa-sign-out fa-fw"></i> Cerrar Sesion</a>
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->
@@ -146,13 +146,13 @@
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                         <li>
-                            <a href="http://localhost/aguara/web/menu.php" value="Load new document"><i class="fa  fa-tasks"></i> Menu Principal</a>
+                            <a href="http://www.smarthub.design/aguara/web/menu.php" value="Load new document"><i class="fa  fa-tasks"></i> Menu Principal</a>
                         </li>
 			<li>
                             <a href="#"><i class="fa fa-user"></i> Usuarios<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="http://localhost/aguara/web/usuarios/ABMusuarios.php">Registros de Usuarios</a>
+                                    <a href="http://www.smarthub.design/aguara/web/usuarios/ABMusuarios.php">Registros de Usuarios</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
@@ -161,8 +161,8 @@
                             <a href="#"><i class="fa  fa-users"></i> Alertas Recibidas<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="http://localhost/aguara/web/alertas/ABMalertas.php"> Registros de Alertas</a>
-                                    <a href="http://localhost/aguara/web/alertas/ABMsalud.php"> Registros de Salud</a>
+                                    <a href="http://www.smarthub.design/aguara/web/alertas/ABMalertas.php"> Registros de Alertas</a>
+                                    <a href="http://www.smarthub.design/aguara/web/alertas/ABMsalud.php"> Registros de Salud</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
@@ -171,9 +171,9 @@
                             <a href="#"><i class="fa  fa-users"></i>Proceso-Alertas<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="http://localhost/aguara/web/alertas/ABMalertas_atendidas.php"> Alertas en Proceso</a>
-                                     <a href="http://localhost/aguara/web/alertas/ABMalertas_procesadas.php"> Alertas Procesadas</a>
-                                    <a href="http://localhost/aguara/web/alertas/ABMalertas_rechazadas.php"> Alertas Rechazadas</a>
+                                    <a href="http://www.smarthub.design/aguara/web/alertas/ABMalertas_atendidas.php"> Alertas en Proceso</a>
+                                     <a href="http://www.smarthub.design/aguara/web/alertas/ABMalertas_procesadas.php"> Alertas Procesadas</a>
+                                    <a href="http://www.smarthub.design/aguara/web/alertas/ABMalertas_rechazadas.php"> Alertas Rechazadas</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
@@ -182,7 +182,7 @@
                             <a href="#"><i class="fa  fa-users"></i> Alertas Sin Registro<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="http://localhost/aguara/web/alertas/ABMalertas_sinregistro.php"> Alertas Sin Registro</a>
+                                    <a href="http://www.smarthub.design/aguara/web/alertas/ABMalertas_sinregistro.php"> Alertas Sin Registro</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
@@ -192,7 +192,7 @@
                             <a href="#"><i class="fa  fa-flickr "></i> Personas<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="http://localhost/aguara/web/personas/ABMpersona.php">Registros de Personas</a>
+                                    <a href="http://www.smarthub.design/aguara/web/personas/ABMpersona.php">Registros de Personas</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
@@ -201,7 +201,7 @@
                             <a href="#"><i class="fa  fa-cubes"></i> Empresas<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="http://localhost/aguara/web/empresas/ABMempresa.php">Registros de Empresas</a>
+                                    <a href="http://www.smarthub.design/aguara/web/empresas/ABMempresa.php">Registros de Empresas</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
@@ -211,10 +211,10 @@
                             <a href="#"><i class="fa  fa-file-text "></i> INFORMES<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="http://localhost/aguara/web/informes/frmResumenReservas.php">Resumen Alertas</a>
+                                    <a href="http://www.smarthub.design/aguara/web/informes/frmResumenReservas.php">Resumen Alertas</a>
                                 </li>
                                 <li>
-                                    <a href="http://localhost/aguara/web/informes/frmResumenRechazados.php">Resumen no Aceptados</a>
+                                    <a href="http://www.smarthub.design/aguara/web/informes/frmResumenRechazados.php">Resumen no Aceptados</a>
                                 </li>
                                 
                             </ul>

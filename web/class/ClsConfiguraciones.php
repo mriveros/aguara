@@ -22,9 +22,9 @@ $codigo_usuario=  $_SESSION["codigo_usuario"];
             }else{
                 echo '<script type="text/javascript">
                          alert("Password no válido..! :( ");
-			 window.location="http://localhost/aguara/web/menu.php";
+			 window.location="http://www.smarthub.design/aguara/web/menu.php";
                       </script>';
             }
             
             }
-        header("Refresh:0; url=http://localhost/aguara/web/menu.php");
+        header("Refresh:0; url=http://www.smarthub.design/aguara/web/menu.php");

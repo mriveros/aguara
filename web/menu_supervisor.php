@@ -1,15 +1,15 @@
 <?php 
 
 if(!isset($_SESSION['codigo_usuario']))
-    header("Location:http://localhost/Aguara/login/acceso.html");
+    header("Location:http://www.smarthub.design/Aguara/login/acceso.html");
     $catego=  $_SESSION["categoria_usuario"];
     if($catego==2){
-        header("Location:http://localhost/Aguara/web/menu_usuario.php");
+        header("Location:http://www.smarthub.design/Aguara/web/menu_usuario.php");
     }
     if($catego==3){
-        header("Location:http://localhost/Aguara/web/menu_supervisor.php");
+        header("Location:http://www.smarthub.design/Aguara/web/menu_supervisor.php");
     }
-    $conectate=pg_connect("host=localhost port=5432 dbname=misterbg user=postgres password=postgres")or die ('Error al conectar a la base de datos');
+    $conectate=pg_connect("host=www.smarthub.design port=5432 dbname=misterbg user=postgres password=postgres")or die ('Error al conectar a la base de datos');
     $consulta= pg_exec($conectate,"select sum(reg_cant)as cantidad,sum(reg_aprob) as aprobados,sum(reg_reprob)
     as reprobados,sum(reg_claus)as clausurados from registros where reg_fecha < now()");
     $cantidad=pg_result($consulta,0,'cantidad');
@@ -134,7 +134,7 @@ if(!isset($_SESSION['codigo_usuario']))
                         <li><a href="#"><i class="fa fa-gear fa-fw"></i> Configuracion</a>
                         </li>
                         <li class="divider"></li>
-                        <li><a href="http://localhost/Aguara/web/logout.php"><i class="fa fa-sign-out fa-fw"></i> Cerrar Sesion</a>
+                        <li><a href="http://www.smarthub.design/Aguara/web/logout.php"><i class="fa fa-sign-out fa-fw"></i> Cerrar Sesion</a>
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->
@@ -154,10 +154,10 @@ if(!isset($_SESSION['codigo_usuario']))
                             <a href="#"><i class="fa  fa-file-text "></i> INFORMES<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="http://localhost/Aguara/web/informes/frmResumenReservas.php">Resumen Reservas</a>
+                                    <a href="http://www.smarthub.design/Aguara/web/informes/frmResumenReservas.php">Resumen Reservas</a>
                                 </li>
                                 <li>
-                                    <a href="http://localhost/Aguara/web/informes/frmResumenRechazados.php">Resumen no Aceptados</a>
+                                    <a href="http://www.smarthub.design/Aguara/web/informes/frmResumenRechazados.php">Resumen no Aceptados</a>
                                 </li>
                                 
                             </ul>

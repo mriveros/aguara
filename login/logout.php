@@ -1,5 +1,5 @@
 <?php 
 	session_start(); 
 	session_destroy(); 
-	header("Location:http://localhost/Aguara/login/acceso.html");
+	header("Location:http://www.smarthub.design/Aguara/login/acceso.html");
 ?>
