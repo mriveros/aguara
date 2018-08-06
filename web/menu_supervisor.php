@@ -9,7 +9,7 @@ if(!isset($_SESSION['codigo_usuario']))
     if($catego==3){
         header("Location:http://www.smarthub.design/Aguara/web/menu_supervisor.php");
     }
-    $conectate=pg_connect("host=www.smarthub.design port=5432 dbname=misterbg user=postgres password=postgres")or die ('Error al conectar a la base de datos');
+    $conectate=pg_connect("host=www.smarthub.design port=5432 dbname=misterbg user=postgres password=Riveros200587!")or die ('Error al conectar a la base de datos');
     $consulta= pg_exec($conectate,"select sum(reg_cant)as cantidad,sum(reg_aprob) as aprobados,sum(reg_reprob)
     as reprobados,sum(reg_claus)as clausurados from registros where reg_fecha < now()");
     $cantidad=pg_result($consulta,0,'cantidad');

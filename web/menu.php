@@ -1,5 +1,5 @@
 <?php
-    $conectate=pg_connect("host=www.smarthub.design port=5432 dbname=aguara user=postgres password=postgres")or die ('Error al conectar a la base de datos');
+    $conectate=pg_connect("host=www.smarthub.design port=5432 dbname=aguara user=postgres password=Riveros200587!")or die ('Error al conectar a la base de datos');
     //$consulta1= pg_exec($conectate,"select count(al_cod) as cantidad from alertas where al_fecha < now()");
     //$consulta2= pg_exec($conectate,"select count(al_cod) as cantidad from alertas where al_activo='t' and al_confirm='f' and al_fecha < now()");
     //$consulta3= pg_exec($conectate,"select count(al_cod) as cantidad from alertas where al_activo='f' and al_confirm='f' and al_fecha < now()");
